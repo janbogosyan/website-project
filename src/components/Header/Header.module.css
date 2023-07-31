@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 4cm;
+    width: 4cm;
+    padding-left: 0.7cm;
+    padding-bottom:0.5cm;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2cm;
+    color: black;
+}
+
+.header-menu>li:hover{
+    cursor: pointer;
+    color: orange
+}
