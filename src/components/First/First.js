@@ -58,10 +58,12 @@ const First = () => {
 
             </div>
             <div className={classes['right-side']}>
-                <div>
+                <button className={classes['right-button']}>
+                    COME NOW
+                </button>
+                <div className={`${classes['goku-img']} ${classes['goku-img-second']}`}>
                     <img src={Goku} alt='young goku' />
                 </div>
-                <button className='btn'>COME NOW</button>
             </div>
         </div>
     )

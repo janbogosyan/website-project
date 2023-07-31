@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    margin-left: 0.1cm;
 }
 
 .logo {
@@ -12,7 +13,7 @@
 
 .header-menu {
     list-style: none;
-    display: flex;
+    display:flex;
     gap: 1.2cm;
     color: black;
 }
