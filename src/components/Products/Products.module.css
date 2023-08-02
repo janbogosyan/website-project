@@ -1,0 +1,36 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    padding: 4rem;
+}
+
+.products-header {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.products-categories {
+    display: flex;
+    gap: 1rem;
+}
+
+.products-categories>div{
+    font-weight: bold;
+    display: flex;
+    gap: 4rem;    
+    flex-direction: column;
+    background-color: rgb(255, 191, 0);
+    font-size: 40px;
+    color: white;
+    justify-content: space-between;
+    border-radius:4rem;
+    padding: 1.4rem;
+    border:solid 4px green
+}
+
