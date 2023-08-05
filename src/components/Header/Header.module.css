@@ -14,8 +14,10 @@
 .header-menu {
     list-style: none;
     display:flex;
-    gap: 1.2cm;
-    color: black;
+    gap: 1.5cm;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .header-menu>li:hover{

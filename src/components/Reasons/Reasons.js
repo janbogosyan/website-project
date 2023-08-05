@@ -6,6 +6,11 @@ import Nintendo2 from '../../assets/nintendo22.png';
 import Nintendo3 from '../../assets/nintendo3.png';
 import NintendoLogo from '../../assets/nintendo.png';
 import Check from '../../assets/check.png';
+import Sponsor1 from '../../assets/sponsor1.png';
+import Sponsor2 from '../../assets/sponsor2.png';
+import Sponsor3 from '../../assets/sponsor3.png';
+
+
 
 const Reasons = () => {
 
@@ -44,11 +49,18 @@ const Reasons = () => {
                         <span>Best quality</span>
                     </div>
                 </div>
-                <span
-                    style={{ color: 'pink', fontWeight: 'normal' }}
-                >
-                    SPONSORED  by
-                </span>
+                <div className={classes.frame}>
+                    <span
+                        style={{ color: 'white', fontWeight: 'normal', fontSize: '22px' }}
+                    >
+                        SPONSORED BY :
+                    </span>
+                    <div className={classes.sponsors}>
+                        <img src={Sponsor1} alt='sponsor1' />
+                        <img src={Sponsor2} alt='sponsor2' />
+                        <img src={Sponsor3} alt='sponsor3' />
+                    </div>
+                </div>
             </div>
         </div>
     );

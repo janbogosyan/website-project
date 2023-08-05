@@ -18,8 +18,8 @@ const Products = () => {
                     <span>New</span>
                 </div>
                 <div className={classes['products-categories']}>
-                    {programsData.map(x => (
-                        <div key={x.id} className={classes.category}>
+                    {programsData.map((x,i) => (
+                        <div key={i} className={classes.category}>
                             {/* {x.image} */}
                             <span className={classes['categories-text']}>{x.heading}</span>
                             <img className={classes.img} src={x.image} alt='something' />

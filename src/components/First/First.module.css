@@ -47,8 +47,9 @@
     width: 20cm;
     margin-top: 4cm;
     margin-right: 15cm;
+    padding: 1rem;
     /* justify-content: center; */
-    position: relative;
+    /* position: relative; */
 }
 
 .goku-img-second {
