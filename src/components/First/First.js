@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
 import classes from './First.module.css';
-import Goku from '../../assets/goku-png-23549.png'
+import Goku from '../../assets/goku-png-23549.png';
 
 const First = () => {
     return (
@@ -61,10 +61,14 @@ const First = () => {
                 <button className={classes['right-button']}>
                     COME NOW
                 </button>
-                <div className={`${classes['goku-img']} ${classes['goku-img-second']}`}>
-                    <img src={Goku} alt='young goku' />
-                </div>
             </div>
+                {/* <div className={`${classes['goku-img']} ${classes['goku-img-second']}`}>
+                    <img src={Goku} alt='young goku' />
+                </div> */}
+                <img  className={classes['goku-img']} src={Goku} alt='Goku'/>
+                <div className={classes['rightside-new']}>
+                    
+                </div>
         </div>
     )
 }

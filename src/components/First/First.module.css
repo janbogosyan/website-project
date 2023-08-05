@@ -5,50 +5,57 @@
 
 .left-side {
     padding-top: 1cm;
-    flex: 3;
+    /* flex: 3; */
     display: flex;
     flex-direction: column
 }
 
 .right-side {
-    display: flex;
-    flex: 2;
-    background-color: red;
-    position: relative;
+    /* display: flex; */
+    /* flex: 1; */
+    width: 50%;
+    margin-left: 10px;
+    /* background-color: red; */
+    /* position: relative; */
 }
 
 /* .right-side>.btn {
     color: red;
     background-color: red;
     /* position: absolute; */
-    /* right: 300rem;
+/* right: 300rem;
     top: 2rem;
     color: black; */
 /* }  */
 
-.right-button{
+.right-button {
     background-color: white;
-    position: absolute;
-    left:1cm;
-    top:1.4cm;
-    color:orange;
+    position: relative;
+    left: 1cm;
+    top: 1.4cm;
+    color: orange;
 }
-.right-button:hover{
-    cursor:crosshair
+
+.right-button:hover {
+    cursor: crosshair
 }
 
 .goku-img {
-    position:absolute;
-    top:2cm;
-    right:7.5cm;
+    /* position: absolute; */
     z-index: 1;
-    position: relative; 
-    width:10cm;
-    height:25cm;
+    height: 20cm;
+    width: 20cm;
+    margin-top: 4cm;
+    margin-right: 15cm;
+    /* justify-content: center; */
+    position: relative;
 }
-.goku-img-second{
-    
+
+.goku-img-second {
+    /* width:1cm;
+    height:1cm; */
 }
+
 
 
 
@@ -177,4 +184,13 @@
 .cool-buttons>div:hover {
     cursor: pointer;
     color: rgb(255, 47, 103);
+}
+
+.rightside-new{
+    background-color: red;
+    margin-left: 30cm;
+    width: 20cm;
+    height: 20cm;
+    display: flex;
+    position:absolute;
 }
