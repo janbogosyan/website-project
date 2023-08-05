@@ -44,10 +44,14 @@ const Reasons = () => {
                         <span>Best quality</span>
                     </div>
                 </div>
+                <span
+                    style={{ color: 'pink', fontWeight: 'normal' }}
+                >
+                    SPONSORED  by
+                </span>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
 export default Reasons;
