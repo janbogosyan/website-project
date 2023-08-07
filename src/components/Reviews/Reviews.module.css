@@ -1,0 +1,46 @@
+.reviews{
+    display: flex;
+    gap:1rem;
+    padding: 0 2rem;
+}
+
+.left-reviews{
+    display: flex;
+    flex: 1 1;
+    gap:2 rem;
+    flex-direction:column;
+    color:white;
+}
+
+ .left-reviews>span:nth-child(1){
+    color:black
+ }
+
+ .left-reviews>span:nth-child(2){
+    font-size: 40px;
+ }
+
+ .left-reviews>span:nth-child(3){
+    font-size: 40px;
+ }
+
+ .left-reviews>span:nth-child(4){
+    text-transform: none;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 40px;
+ }
+
+ .right-reviews{
+    flex:1;
+    position: relative;
+ }
+
+ .right-reviews>img{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    object-fit:cover;
+    right:27rem;
+    bottom:0.7rem;
+ }

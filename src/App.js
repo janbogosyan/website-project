@@ -2,6 +2,7 @@ import './App.css';
 import First from './components/First/First'
 import Products from './components/Products/Products';
 import Reasons from './components/Reasons/Reasons';
+import Reviews from './components/Reviews/Reviews';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <First />
       <Products />
       <Reasons />
+      <Reviews />
     </div>
   );
 }
