@@ -53,16 +53,16 @@
     /* border: 2px solid rgb(207, 255, 31); */
     background-color: red;
     right: 15rem;
-    top:0.1rem;
+    top:-2rem;
 }
 
 .right-reviews>img {
     position: absolute;
-    width: 15rem;
-    height: 15rem;
+    width: 12.5rem;
+    height: 12.5rem;
     object-fit: cover;
-    right: 15rem;
-    bottom: 0.7rem;
+    right: 19rem;
+    top: 2rem;
 }
 
 .arrows{

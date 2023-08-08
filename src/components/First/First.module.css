@@ -187,11 +187,12 @@
     color: rgb(255, 47, 103);
 }
 
-.rightside-new{
+.rightside-new {
     background-color: red;
     margin-left: 30cm;
     width: 20cm;
     height: 20cm;
     display: flex;
-    position:absolute;
+    position: absolute;
 }
+
