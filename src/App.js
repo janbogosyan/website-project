@@ -3,6 +3,9 @@ import First from './components/First/First'
 import Products from './components/Products/Products';
 import Reasons from './components/Reasons/Reasons';
 import Reviews from './components/Reviews/Reviews';
+import Join from './components/Join/Join';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
 
@@ -14,6 +17,8 @@ function App() {
       <Products />
       <Reasons />
       <Reviews />
+      <Join />
+      <Footer />
     </div>
   );
 }

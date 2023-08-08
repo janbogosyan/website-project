@@ -48,7 +48,7 @@ max-height: 100%; */
   align-items: center;
   justify-content: center;
   background-color: #e7f828;
-    border-radius: 2cm;
-    width: fit-content;
-    padding: 40px 15px;
+  border-radius: 2cm;
+  width: fit-content;
+  padding: 40px 15px;
 }
