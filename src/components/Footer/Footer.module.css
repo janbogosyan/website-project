@@ -1,14 +1,24 @@
 .footer-container>hr {
     border: 1px solid
 }
-
+ 
 .footer {
     padding: 1rem 2rem;
     display: flex;
+    flex-direction: column;
+    gap:4rem;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
 }
 
-.footer>img {
+.social-links{
+    display: flex;
+    gap:4rem;
+}
+
+.social-links>img {
     height: 100px;
     width: 100px;
-    padding: 2rem;
+    cursor: pointer;
 }
