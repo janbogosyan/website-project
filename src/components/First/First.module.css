@@ -108,12 +108,14 @@
 }
 
 .buy-heading>div:nth-of-type(3) {
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: 27px;
+    font-weight: 250;
     text-transform: none;
     letter-spacing: 1px;
-    width: 80%;
+    width: 100%;
+    color: rgb(82, 255, 76);
 }
+
 
 .figures {
     display: flex;

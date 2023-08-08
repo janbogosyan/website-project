@@ -18,7 +18,7 @@ const First = () => {
                     <motion.div
                         initial={{ left: '117.5px' }}
                         whileInView={{ left: '8px' }}
-                        transition={{...transition,type:'tween'}}
+                        transition={{ ...transition, type: 'tween' }}  
                     >
                     </motion.div>
                     <span>the best anime shop</span>
@@ -28,15 +28,21 @@ const First = () => {
                     <div className={classes['buy-heading']}>
                         <div>
                             {/* this className 'stroke-text' coming from App.css(so no need to import its global) */}
-                            <span className='stroke-text'>Buy</span>
-                            <span>Your</span>
+                            <span className='stroke-text'>Buy </span>
+                            <span>Your </span>
                         </div>
                         <div>
                             <span>Dream items</span>
                         </div>
-                        <div>
-                            <span>asdasasdkkadskasdsdasdasdasdasdasdasdasdasdasdasd</span>
-                        </div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: '-60vh' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 3 }}
+                        >
+                            <span>Only here you can choose between huge collection of products !</span>
+                        </motion.div>
+
                     </div>
                     {/* figures */}
                     <div className={classes['figures']}>
