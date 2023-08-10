@@ -1,6 +1,8 @@
 .first {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    height: 700px;
 }
 
 .left-side {
@@ -11,12 +13,12 @@
 }
 
 .right-side {
-    /* display: flex; */
-    /* flex: 1; */
-    width: 50%;
+    display: flex;
+    flex: 1;
+    /* width: 50%; */
     margin-left: 10px;
     /* background-color: red; */
-    /* position: relative; */
+    position: relative;
 }
 
 /* .right-side>.btn {
@@ -29,25 +31,26 @@
 /* }  */
 
 .right-button {
-    background-color: white;
+
     position: relative;
     left: 1cm;
     top: 1.4cm;
-    color: orange;
+    /* color: orange; */
 }
 
-.right-button:hover {
-    cursor: crosshair
+.right-button>button:hover {
+    cursor: pointer;
+    background-color: yellow;
 }
 
 .goku-img {
     /* position: absolute; */
     z-index: 1;
-    height: 20cm;
-    width: 20cm;
+    height: 15cm;
+    width: 15cm;
     margin-top: 4cm;
-    margin-right: 15cm;
-    padding: 1rem;
+    margin-right: 30cm;
+    /* padding: 1rem; */
     /* justify-content: center; */
     /* position: relative; */
 }
@@ -84,7 +87,7 @@
 
 .the-best-ad>div {
     position: absolute;
-    background-color: rgb(61, 226, 83);
+    background-color: rgb(46, 255, 28);
     width: 2.3cm;
     height: 80%;
     left: 4px;
@@ -198,3 +201,44 @@
     position: absolute;
 }
 
+@media screen and (max-width: 768px) {
+    .first {
+        flex-direction: column;
+    }
+
+    .the-best-ad {
+        margin-top: 0;
+        font-size: small;
+        align-self: center;
+        transform: scale(1);
+    }
+
+    .goku-img {
+        margin-left: 50px;
+        margin-top: 0;
+        width: 7cm;
+        height: 10cm;
+        display: none;
+    }
+
+    .cool-buttons {
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+        gap: 27px;
+    }
+
+    .right-button {
+        /* display: none; */
+
+        background-color: transparent;
+        align-self: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 10.5rem;
+        margin-right: -10rem;
+        left: auto;
+        width: 1px;
+    }
+
+}

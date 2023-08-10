@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const First = () => {
 
     const transition = { type: 'spring', duration: 3 };
+    const mobile = window.innerWidth <= 768 ? true : false;  //the_best_ad text calibrated like this for mobile version
 
     return (
 
@@ -16,9 +17,9 @@ const First = () => {
                 {/* the best anime shop */}
                 <div className={classes['the-best-ad']}>
                     <motion.div
-                        initial={{ left: '117.5px' }}
+                        initial={{ left: mobile ? '71':'105px' }}
                         whileInView={{ left: '8px' }}
-                        transition={{ ...transition, type: 'tween' }}  
+                        transition={{ ...transition, type: 'tween', repeat: Infinity }}
                     >
                     </motion.div>
                     <span>the best anime shop</span>
@@ -63,19 +64,26 @@ const First = () => {
 
                 {/* cool buttons */}
                 <div className={classes['cool-buttons']}>
-                    <div>
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 3, repeat: Infinity }} >
                         <buttons className='btn'>Cool Button 1</buttons>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                        // initial={{ left: '105px',right: '20px' }}
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 3, repeat: Infinity }}>
                         <buttons className='btn'>Cool Button 2</buttons>
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>
             <div className={classes['right-side']}>
-                <button className={classes['right-button']}>
-                    COME NOW
-                </button>
+                <div className={classes['right-button']}>
+                    <button>
+                        COME NOW
+                    </button>
+                </div>
             </div>
             {/* <div className={`${classes['goku-img']} ${classes['goku-img-second']}`}>
                     <img src={Goku} alt='young goku' />

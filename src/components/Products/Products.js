@@ -15,7 +15,7 @@ const Products = () => {
                 <div className={classes['products-header']}>
                     <span className='stroke-text'>Discounted</span>
                     <span>Most Selling</span>
-                    <span>New</span>
+                    <span className='stroke-text'>New</span>
                 </div>
                 <div className={classes['products-categories']}>
                     {programsData.map((x,i) => (

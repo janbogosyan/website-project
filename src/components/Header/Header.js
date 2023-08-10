@@ -6,7 +6,7 @@ const Header = () => {
         <div className={classes.header}>
 
             <img className={classes.logo} src={Logo} alt='logo' />
-
+         
             <ul className={classes['header-menu']}>
                 <li>Home</li>
                 <li>Shop</li>

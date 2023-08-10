@@ -48,21 +48,21 @@
 
 .right-reviews>:nth-child(2) {
     position: absolute;
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     /* border: 2px solid rgb(207, 255, 31); */
-    background-color: red;
-    right: 15rem;
-    top:-2rem;
+    background-color: rgb(255, 5, 147);
+    right: 18.7rem;
+    top:1.8rem;
 }
 
 .right-reviews>img {
     position: absolute;
-    width: 12.5rem;
-    height: 12.5rem;
-    object-fit: cover;
-    right: 19rem;
-    top: 2rem;
+    width: 13.5rem;
+    height: 7.5rem;
+    /* object-fit: cover; */
+    right: 18rem;
+    top: 4rem;
 }
 
 .arrows{
