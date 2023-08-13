@@ -31,7 +31,7 @@ const Join = () => {
             </div>
 
             <div className={classes['join-right']}>
-                <form ref={form} obSubmit={sendEmail} className={classes['email-container']} >
+                <form ref={form} onSubmit={sendEmail} className={classes['email-container']} >
                     <input
                         type='email'
                         name='user_email'

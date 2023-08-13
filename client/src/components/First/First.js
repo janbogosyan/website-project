@@ -67,13 +67,13 @@ const First = () => {
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 3, repeat: Infinity }} >
-                        <buttons className='btn'>Cool Button 1</buttons>
+                        <button className='btn'>Cool Button 1</button>
                     </motion.div>
                     <motion.div
                         // initial={{ left: '105px',right: '20px' }}
                         animate={{ rotate: 360 }}
                         transition={{ duration: 3, repeat: Infinity }}>
-                        <buttons className='btn'>Cool Button 2</buttons>
+                        <button className='btn'>Cool Button 2</button>
                     </motion.div>
                 </div>
 
