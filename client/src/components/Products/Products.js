@@ -15,8 +15,8 @@ const Products = ({backendUserInfo}) => {
         <>
             {/* {images.map((img) => <img className={classes.img} src={img} alt="test" />)}  */}
 
-            {shouldShowResult && backendUserInfo != null && backendUserInfo.users.map(item => <li>{item}</li>)}
-            
+            {shouldShowResult && backendUserInfo != null && backendUserInfo.users.map((item,i) => <li key={i}>{item}</li>)}
+
             <div className={classes.products}>
                 <div className={classes['products-header']}>
                     <span >
