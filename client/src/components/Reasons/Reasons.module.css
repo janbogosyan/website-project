@@ -134,10 +134,19 @@
 
 @media screen and (max-width: 768px) {
     .right-r {
-        padding: 0%;
+        padding: 1rem;
         margin-right: 500px;
-        font-size: 15px;
+        font-size: 13px;
+        position: relative;
+        background: none;
     }
+
+    .right-r>div:nth-child(2){
+        color: rgb(129, 31, 31);
+        
+        font-size: 2rem;
+    }
+
     .right-r>div>span:nth-child(2){
         /* color:red; */
         font-size:40px;
@@ -157,13 +166,13 @@
     }
 
     .frame{
-        
+        visibility: hidden;
+        display: none;
         /* align-items: center; */
         /* align-self: center; */
         /* margin:200 auto; */
         /* gap:200px; */
-        
-        
+        /* background: none; */
         margin-left:-10px;
         display:flex;
         flex-direction: column; 

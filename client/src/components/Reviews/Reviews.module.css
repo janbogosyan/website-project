@@ -80,13 +80,31 @@
 
 @media screen and(max-width: 768px) {
     .reviews {
+        display: flex;
+        flex: 1 1;
         flex-direction: column;
+        position: relative;
     }
 
-    .left-reviews{
+
+    .left-reviews {
         flex-direction: column;
         display: flex;
         font-size: 200px;
+    }
+
+    .left-reviews>:nth-child(1) {}
+
+    .right-reviews {
+        display: flex;
+        flex-direction: column;
+    }
+    .arrows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:2rem;
     }
 
     /* .right-reviews{

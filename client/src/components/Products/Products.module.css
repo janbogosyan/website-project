@@ -14,6 +14,18 @@
     color: white;
     text-transform: uppercase;
     padding: 2rem;
+    
+}
+
+
+
+.products-header>span>button{
+    /* background-color: red; */
+    font-size: 3rem;
+    position: relative;
+    margin-bottom:1rem;
+    justify-content: center;
+    color: black;
 }
 
 .products-header>span:hover{
