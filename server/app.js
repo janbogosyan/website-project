@@ -6,9 +6,13 @@ const app = express(); //imeto e po izbor
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-app.use(bodyParser.urlencoded({extended:false}));  //app.use - using body-parser for the whope app
+app.use(bodyParser.urlencoded({ extended: false }));  //app.use - using body-parser for the whope app
 
-app.use(adminRoutes);
+app.use('/admin',adminRoutes);
 app.use(shopRoutes);
+
+app.use((req, res, next) => {         
+    res.status(404).send('<h1>Page not found</h1>')
+})
 
 app.listen(3000); 
