@@ -4,6 +4,9 @@ const bodyParser = require('body-parser'); //ne e nujno da go instalirame otdeln
 
 const app = express(); //imeto e po izbor 
 
+app.set('view engine', 'pug'); //you can't pass variables/values to pure html. The view engine is something that looks at the data you pass and generates the html markup for you. and using pug which is templat eengine for express
+app.set('views','views') // and here we say where to find this templates , first argument its to look , second its the name of the folder(can be any name, just we named our folder 'views')
+
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
