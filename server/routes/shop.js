@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
     // res.sendFile(path.join(__dirname, '../', 'views', 'shop.html')) //s dve dolni cherti __dirname - will point to the path(folder)we are in, in this case routes 
     // console.log(adminData.products);
     // res.sendFile(path.join(rootDir, 'views', 'shop.html')) //more cleaner and short way to do it than the upper one
-    res.render('shop')
+    res.render('shop') // through pug
 })
 
 module.exports = router; 
