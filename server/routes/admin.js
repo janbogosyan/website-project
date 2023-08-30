@@ -11,8 +11,8 @@ const products = [];
 //   /admin/add-product => GET      zashtoto v app.js sme nastroili taka da e putq  app.use('/admin',adminRoutes) i ne e nujno tuk da pishem /admin;
 router.get('/add-product', (req, res, next) => {
     // res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')) //  /admin/add-product
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html')) // instead  /admin/add-product  we use our custom rootDir
-
+    // res.sendFile(path.join(rootDir, 'views', 'add-product.html')) // instead  /admin/add-product  we use our custom rootDir
+    res.render('add-product', {addProductTitle: 'Add product'})
 })
 
 //   /admin/add-product => POST
