@@ -17,7 +17,7 @@ router.get('/add-product', (req, res, next) => {
 
 //   /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {  //the more specific paths(middleware should be first) 
-    products.push({ title: req.body.title })
+    products.push({ title: req.body.title })  //vremenno reshenie predi da vmukna database
     res.redirect('/')
 });
 
