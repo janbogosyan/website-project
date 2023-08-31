@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
     // console.log(adminData.products);
     // res.sendFile(path.join(rootDir, 'views', 'shop.html')) //more cleaner and short way to do it than the upper one
     const products = adminData.products;
-    res.render('shop', {prods: products, docTitle: 'GOKU SHOP'}) // this is provided by express and will use our templated engine we set in app.js app.set('view engine','pug')
+    res.render('shop', {addProductTitle:'GOKU Shop',prods: products, path:'/'}) // this is provided by express and will use our templated engine we set in app.js app.set('view engine','pug')
 })
 
 module.exports = router; 

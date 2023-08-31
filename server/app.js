@@ -25,7 +25,7 @@ app.use(shopRoutes);
 
 app.use((req, res, next) => {                //za stranici koito ne otgovarqt na nikoi url path setvame error message tuk v app.js nai otdolu, ako nikoi path ne otgovarq na ochakvanoto vlizame tuk
     // res.status(404).sendFile(path.join(__dirname, 'views', 'error-page.html'))
-    res.status(404).render('error-page')
+    res.status(404).render('404',{addProductTitle:'Page Not Found'})
 })
 
 

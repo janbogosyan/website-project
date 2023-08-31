@@ -12,7 +12,7 @@ const products = [];
 router.get('/add-product', (req, res, next) => {
     // res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')) //  /admin/add-product
     // res.sendFile(path.join(rootDir, 'views', 'add-product.html')) // instead  /admin/add-product  we use our custom rootDir
-    res.render('add-product', {addProductTitle: 'Add product'})
+    res.render('add-product', {addProductTitle: 'Add product', path: '/admin/add-product'})
 })
 
 //   /admin/add-product => POST
