@@ -7,7 +7,7 @@ const bodyParser = require('body-parser'); //nujen e tozi package za da parsva r
 
 const app = express(); //imeto e po izbor 
 
-app.set('view engine', 'pug'); //you can't pass variables/values to pure html. The templating engine is something that looks at the data you pass and generates the html markup for you. and using pug which is templat eengine for express
+app.set('view engine', 'ejs'); //you can't pass variables/values to pure html. The templating engine is something that looks at the data you pass and generates the html markup for you. and using pug which is templat eengine for express
 app.set('views','views') // and here we say where to find this templates , first argument its to look , second its the name of the folder(can be any name, just we named our folder 'views')
 
 const adminData = require('./routes/admin'); //the order of this imports doesnt matter
@@ -25,7 +25,7 @@ app.use(shopRoutes);
 
 app.use((req, res, next) => {                //za stranici koito ne otgovarqt na nikoi url path setvame error message tuk v app.js nai otdolu, ako nikoi path ne otgovarq na ochakvanoto vlizame tuk
     // res.status(404).sendFile(path.join(__dirname, 'views', 'error-page.html'))
-    res.status(404).render('404',{addProductTitle:'Page Not Found'})
+    res.status(404).render('error-page',{addProductTitle:'Page Not Found'})
 })
 
 

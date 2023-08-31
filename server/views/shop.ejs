@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= addProductTitle %>
+    </title>
+    <!-- dobavqme ruchno v head po tozi nachin imame static access do css-te -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a class="active" href="/">Shop</a></li>
+                <li class="main-header__item"><a href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <% if (prods.length> 0 { %>
+            <div class="grid">
+                <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class="product__title">Toy</h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="https://cdn.ozone.bg/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/f/a/d03a76e63c512a8edce337949203ee6a/figura-funko-pop!-animation--fairy-tail-s3--zeref-31.jpg"
+                            alt="Figure">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="product__price">$19.99</h2>
+                        <p class="product__description">A very interesting figure</p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+            <% } else { %>
+                <h1>No Products Found!</h1>
+            <% } %>
+    </main>
+</body>
+
+</html>
