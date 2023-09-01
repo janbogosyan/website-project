@@ -7,6 +7,7 @@ const bodyParser = require('body-parser'); //nujen e tozi package za da parsva r
 
 const app = express(); //imeto e po izbor 
 
+//for template engine
 app.set('view engine', 'ejs'); //you can't pass variables/values to pure html. The templating engine is something that looks at the data you pass and generates the html markup for you. and using pug which is templat eengine for express
 app.set('views','views') // and here we say where to find this templates , first argument its to look , second its the name of the folder(can be any name, just we named our folder 'views')
 

@@ -1,8 +1,8 @@
 const express = require('express');
 
-const path = require('path')
+// const path = require('path')
 
-const rootDir = require('../util/path')  // importvame go
+// const rootDir = require('../util/path')  // importvame go
 
 const router = express.Router();
 
@@ -12,7 +12,8 @@ const products = [];
 router.get('/add-product', (req, res, next) => {
     // res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')) //  /admin/add-product
     // res.sendFile(path.join(rootDir, 'views', 'add-product.html')) // instead  /admin/add-product  we use our custom rootDir
-    res.render('add-product', {addProductTitle: 'Add product', path: '/admin/add-product'})
+    res.render('add-product', {addProductTitle: 'Add product', path: '/admin/add-product'}) //here we render template with a special method provided by express,that render method will always look for register view engine(our register view engine is in the beggining of app.js) 
+    // and this 'add-product' is our add-product.ejs file in views,but if its in subfolder will be like products/add-product
 })
 
 //   /admin/add-product => POST
