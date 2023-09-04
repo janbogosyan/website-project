@@ -24,13 +24,13 @@ module.exports = class Product {
         });
     }
 
-    static fetchAll() {         //i will add the static keyword which javascript offers which makes sure that i can call this method directly on the class itself and not on an instantiated object
+    static fetchAll(cb) {    //we will set cb(callback) here and we will use it as a passed function and after that we go to our controllers folder in products.js to use it    //i will add the static keyword which javascript offers which makes sure that i can call this method directly on the class itself and not on an instantiated object
         const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json');
         fs.readFile(p, (err, fileContent) => { //fileContent its our list of products stored in folder data and will be updated everytime by the server when we add new product from the website
             if (err) {
-                return [];             //if no products return empty arr
+                cb([]);             //if no products return empty arr
             }
-            return JSON.parse(fileContent); // JSON.parse will return our fileCOntent as an array because now its just a string
+            cb(JSON.parse(fileContent)); // JSON.parse will return our fileCOntent as an array because now its just a string
         })
         // return products;   //obviously i want to be able to retrieve all products from that array and i also want to do that throuh my product model, however whereas save makes sense to be called on a concrete instantiated object basedd on product
     }                           //I also want to fetch all methods which is likee the utility function you could say.This is not called on a single instance of the product because it should fetch all products and i dont want to create a new object with the new keyword with some dummy title just to fetch all existing products 
