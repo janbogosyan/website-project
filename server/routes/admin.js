@@ -1,12 +1,14 @@
 const express = require('express');
 
-const path = require('path')
+// const path = require('path')
 
 // const rootDir = require('../util/path')  // importvame go
 
 const productsController = require('../controllers/products');
 
 const router = express.Router();
+
+
 
 // const products = [];
 
