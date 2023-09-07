@@ -1,7 +1,10 @@
+//controlles - connects model and view
+//should only make sure that the two can communicate (in both directions)
+
 //we put here logic related to products
 // const products = []
 
-const Product = require('../models/product');
+const Product = require('../models/product');  //we get it from the model folder
 
 exports.getAddProduct = (req, res, next) => {     //exports - with this syntax we can have multiple exports in one file easily/ and exports.getAddProduct(the name .getAddProduct its up to u)
     res.render('add-product', {

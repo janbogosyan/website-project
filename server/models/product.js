@@ -1,21 +1,35 @@
+// To put it simply, the data transmitted between the database and the user interface is handled by this logic. The term “domain object” or
+//  “domain entity” refers to the model. In the express, models are responsible for creating a logical layer to communicate with the database.
+
+// Model folder - responsible for REPRESENTING(like model :D) your data
+//responsible for managing your data(saving,fetching, etc)
+//doesnt matter if you manage data in memory,files,databases
+//contains data-related logic
+
+//views folder - responsible for what user sees
+//shouldnt contain too much logic, your logic should be in the model or partly in the controller
+//because the controller should do everything that needs to be done to connect your model and view
+
+
+
 // const products = [];
 
 const fs = require('fs'); //Build in Node.js file system module - help us store,access, and manage data
 const path = require('path');
-const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json');
+const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json'); // in folder data/products.json will store our data
 
-const getProductsFromFile = (cb) => {
-    fs.readFile(p, (err, fileContent) => { //fileContent its our list of products stored in folder data and will be updated everytime by the server when we add new product from the website
+const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
+    fs.readFile(p, (err, fileContent) => { //fileContent(the name fileContent we set and its only here) its our list of products stored in folder data/products.json and will be updated everytime by the server when we add new product from the website
         if (err) {
             return cb([]);             //if no products return empty arr
         }
-        cb(JSON.parse(fileContent)); // JSON.parse will return our fileCOntent as an array because now its just a string
+        cb(JSON.parse(fileContent));   // JSON.parse will return our fileContent as an array(array of our products) because now its just a string
     });
 };
 
-module.exports = class Product {
+module.exports = class Product {     // its product.js because the core thing here its we will create 1 product with this model and then we will store every product in array  products
     constructor(t) {            //here i want to receive a title for the product which i will then create inside my controller
-        this.title = t;         //and then i create a property in this class, you do this with the this keyword and then this title is equal to the title im receiving as an argument here
+        this.title = t;         //and then i create a property in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
     }
     save() {
         getProductsFromFile(products => {
@@ -37,10 +51,10 @@ module.exports = class Product {
         // });
     };
 
-    static fetchAll(cb) {
-        getProductsFromFile(cb);
-
         //we will set cb(callback) here and we will use it as a passed function and after that we go to our controllers folder in products.js to use it    //i will add the static keyword which javascript offers which makes sure that i can call this method directly on the class itself and not on an instantiated object
+    static fetchAll(cb) {    
+        getProductsFromFile(cb);  //we pass cb , so we can use it  as this (we already use this logic in const getProductsFromFile) ->  cb(JSON.parse(fileContent)); so we just need to pass here cb(or other name as a parameter(argument))
+
         // const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json');
         // fs.readFile(p, (err, fileContent) => { //fileContent its our list of products stored in folder data and will be updated everytime by the server when we add new product from the website
         //     if (err) {
