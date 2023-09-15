@@ -28,12 +28,12 @@ const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
 };
 
 module.exports = class Product {     // its product.js because the core thing here its we will create 1 product with this model and then we will store every product in array  products
-    constructor(t) {            //here i want to receive a title for the product which i will then create inside my controller
-        this.title = t;         //and then i create a property in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
+    constructor(t) {            //here in constructor() i want to receive a title for the product which i will then create inside my controller
+        this.title = t;         //and then i create a property(variable) in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
     }
     save() {
         getProductsFromFile(products => {
-            products.push(this); //this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
+            products.push(this); ////this will refer to the object created based on the class and that is exactly i want to store in this array// this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
             fs.writeFile(p, JSON.stringify(products), err => {         //and now need to save it back into the file 
                 console.log(err);
             })
