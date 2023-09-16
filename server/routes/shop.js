@@ -5,7 +5,7 @@ const path = require('path');
 
 const router = express.Router();
 
-const productsController = require('../controllers/products')
+const shopController = require('../controllers/shop')
 
 // router.get('/', (req, res, next) => {
 //     res.sendFile(path.join(__dirname, '../', 'views', 'shop.html')) //s dve dolni cherti __dirname - will point to the path(folder)we are in, in this case routes 
@@ -20,6 +20,6 @@ const productsController = require('../controllers/products')
 //     }) // this is provided by express and will use our templated engine we set in app.js app.set('view engine','pug')
 // })
 
-router.get('/', productsController.getProducts)
+router.get('/', shopController.getProducts)
 
 module.exports = router; 

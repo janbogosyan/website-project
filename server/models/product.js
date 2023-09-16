@@ -16,7 +16,7 @@
 
 const fs = require('fs'); //Build in Node.js file system module - help us store,access, and manage data
 const path = require('path');
-const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json'); // in folder data/products.json will store our data
+const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json'); // in folder data will create automatic folder with name products.json and there will store our data
 
 const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
     fs.readFile(p, (err, fileContent) => { //fileContent(the name fileContent we set and its only here) its our list of products stored in folder data/products.json and will be updated everytime by the server when we add new product from the website

@@ -4,7 +4,7 @@ const express = require('express');
 
 // const rootDir = require('../util/path')  // importvame go
 
-const productsController = require('../controllers/products');
+const adminController = require('../controllers/admin');
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ const router = express.Router();
 
 
 //   /admin/add-product => GET
-router.get('/add-product', productsController.getAddProduct); //we dont execute this function productsController.getAddProduct instead we just pass a reference to this function we just telling express, the express router that it should take it and store it and whenever request reaches this route it should go ahead and execute it
+router.get('/add-product', adminController.getAddProduct); //we dont execute this function productsController.getAddProduct instead we just pass a reference to this function we just telling express, the express router that it should take it and store it and whenever request reaches this route it should go ahead and execute it
 
 //   /admin/add-product => POST
 // router.post('/add-product', (req, res, next) => {  //the more specific paths(middleware should be first) 
@@ -30,8 +30,13 @@ router.get('/add-product', productsController.getAddProduct); //we dont execute 
     // res.redirect('/')
 // });
 
+
+//need to add controller function with it
+router.get('/products');
+
+
 //   /admin/add-product => POST
-router.post('/add-product', productsController.postAddProduct);
+router.post('/add-product', adminController.postAddProduct);
 
 
 // exports.routes = router;
