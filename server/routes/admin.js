@@ -32,7 +32,7 @@ router.get('/add-product', adminController.getAddProduct); //we dont execute thi
 
 
 //need to add controller function with it
-router.get('/products');
+router.get('/products', adminController.getProducts);
 
 
 //   /admin/add-product => POST

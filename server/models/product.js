@@ -28,27 +28,16 @@ const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
 };
 
 module.exports = class Product {     // its product.js because the core thing here its we will create 1 product with this model and then we will store every product in array  products
-    constructor(t) {            //here in constructor() i want to receive a title for the product which i will then create inside my controller
+    constructor(t) {            //here in constructor() i want to receive a title for the product which i will then create inside my controller folder
         this.title = t;         //and then i create a property(variable) in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
     }
     save() {
         getProductsFromFile(products => {
-            products.push(this); ////this will refer to the object created based on the class and that is exactly i want to store in this array// this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
-            fs.writeFile(p, JSON.stringify(products), err => {         //and now need to save it back into the file 
+            products.push(this); ////this will refer to the object created (ще е името на продукта който сме сетнали в конструктора),based on the class and that is exactly i want to store in this array// this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
+            fs.writeFile( p, JSON.stringify(products), err => {         //and now need to save it back into the file 
                 console.log(err);
             })
         });
-        //this is method its like a function ,just without the function keyword
-        // products.push(this);                   //this will refer to the object created based on the class and that is exactly i want to store in this array
-        // const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json');   // in data folder i want to store my file and my file name will be products.json and i give extension json bcs i wanna store my file in json format
-        // fs.readFile(p, (err, fileContent) => {   //read file p , after read we get err-error or fileContent- данните от файла p    //to store a new product in products.json first of all i need to get the existing array of products,so i will first read that file.So lets use fs read file
-            // let products = [];
-
-            // products.push(this); //this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
-            // fs.writeFile(p, JSON.stringify(products), (err) => {         //and now need to save it back into the file 
-            //     console.log(err);
-            // })
-        // });
     };
 
         //we will set cb(callback) here and we will use it as a passed function and after that we go to our controllers folder in products.js to use it    //i will add the static keyword which javascript offers which makes sure that i can call this method directly on the class itself and not on an instantiated object

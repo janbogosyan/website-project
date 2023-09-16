@@ -1,0 +1,37 @@
+
+
+<%- include ('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include ('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+            <div class="grid">
+                <% for (let product of prods) { %>
+                <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class="product__title"><%= product.title %></h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="https://cdn.ozone.bg/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/f/a/d03a76e63c512a8edce337949203ee6a/figura-funko-pop!-animation--fairy-tail-s3--zeref-31.jpg"
+                            alt="Figure">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="product__price">$19.99</h2>
+                        <p class="product__description"> High quality anime figure </p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </article>
+                <% } %>
+            </div>
+            <% } else { %>
+                <h1>No Products Found!</h1>
+            <% } %>
+    </main>
+
+<%- include ('../includes/end.ejs') %>

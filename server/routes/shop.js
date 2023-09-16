@@ -16,10 +16,18 @@ const shopController = require('../controllers/shop')
 //         addProductTitle:'GOKU Shop',
 //         prods: products, 
 //         path:'/',
-        
+
 //     }) // this is provided by express and will use our templated engine we set in app.js app.set('view engine','pug')
 // })
 
-router.get('/', shopController.getProducts)
+
+//this routes folder work together with the controllers folder
+router.get('/', shopController.getIndex);
+
+router.get('/products', shopController.getProducts);
+
+router.get('/cart', shopController.getCart);
+
+router.get('/checkout', shopController.getCheckout);
 
 module.exports = router; 
