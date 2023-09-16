@@ -16,8 +16,11 @@ exports.getAddProduct = (req, res, next) => {     //exports - with this syntax w
 
 
 exports.postAddProduct = (req, res, next) => {          //създаваме продукт и го postvame  в нашия сайт 
-    // products.push({ title: req.body.title });
-    const product = new Product(req.body.title)  //така създаваме нов продукт от нашия class Product //title - взима го от add-product.ejs там имаме <input в който сме добавили nmae='title'
+    const title = req.body.title;       //we take title,imageUrl..etc by name=  from add-product.ejs for example and creating new product
+    const imageUrl = req.body.imageUrl;
+    const price = req.body.price;
+    const description = req.body.description;
+    const product = new Product(title,imageUrl,price,description)  //така създаваме нов продукт от нашия class Product //title - взима го от add-product.ejs там имаме <input в който сме добавили nmae='title'
     product.save();          //и след като сме го създали го запазваме чрез нашия save() method който сме създали в models/product.js
     res.redirect('/');
 };

@@ -28,8 +28,11 @@ const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
 };
 
 module.exports = class Product {     // its product.js because the core thing here its we will create 1 product with this model and then we will store every product in array  products
-    constructor(t) {            //here in constructor() i want to receive a title for the product which i will then create inside my controller folder
-        this.title = t;         //and then i create a property(variable) in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
+    constructor(ttitle, imageUrl, description, price) {            //here in constructor() i want to receive a title for the product which i will then create inside my controller folder
+        this.title = title;         //and then i create a property(variable) in this class, you do this with the 'this' keyword and then this title is equal to the title im receiving as an argument here
+        this.imageUrl = imageUrl;
+        this.description = description;  //views/admin/add-product.ejs там ги използваме
+        this.price = price;
     }
     save() {
         getProductsFromFile(products => {
