@@ -5,6 +5,7 @@
 //responsible for managing your data(saving,fetching, etc)
 //doesnt matter if you manage data in memory,files,databases
 //contains data-related logic
+//Models- This folder would contain all your schema files and and the functions required for the schema would also lie over here
 
 //views folder - responsible for what user sees
 //shouldnt contain too much logic, your logic should be in the model or partly in the controller
@@ -16,9 +17,9 @@
 
 const fs = require('fs'); //Build in Node.js file system module - help us store,access, and manage data
 const path = require('path');
-const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json'); // in folder data will create automatic folder with name products.json and there will store our data
+const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products.json'); //filename is part of the object process.mainModule(and it will set the  root  directory -  folder 'data') in folder data will create automatic folder with name products.json and there will store our data
 
-const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function
+const getProductsFromFile = (cb) => {  //cb = 'callback' its passed function Functions are data, and therefore can be passed around just like other values. This means a function can be passed to another function as an argument.
     fs.readFile(p, (err, fileContent) => { //fileContent(the name fileContent we set and its only here) its our list of products stored in folder data/products.json and will be updated everytime by the server when we add new product from the website
         if (err) {
             return cb([]);             //if no products return empty arr
@@ -35,6 +36,7 @@ module.exports = class Product {     // its product.js because the core thing he
         this.description = description;  //views/admin/add-product.ejs там ги използваме PODREDBATA E VAJNA na title,imageUrl,description,price , trqbva da e sushtata tuk i tam
     }
     save() {
+        this.id = Math.random().toString();    //u can use toString or toNumber its up to you //adding dummy id (prefered way will be with some bibloteque like uniqId or etc..bcs Math.random( dont guarantee everytime will be different number ))
         getProductsFromFile(products => {
             products.push(this); ////this will refer to the object created (ще е името на продукта който сме сетнали в конструктора),based on the class and that is exactly i want to store in this array// this' - refer to the class Product and we should use arrow functions otherwise 'this' will not reffer to the class anymore, here we use arrow function so its good
             fs.writeFile( p, JSON.stringify(products), err => {         //and now need to save it back into the file 

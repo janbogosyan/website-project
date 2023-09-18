@@ -21,12 +21,19 @@ const shopController = require('../controllers/shop')
 // })
 
 
+//orders of routes matter, sometimes in some cases
+
 //this routes folder work together with the controllers folder
 router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
+router.get('/products/:productId', );  //for specific item with Id
+
+
 router.get('/cart', shopController.getCart);
+
+router.get('/orders', shopController.getOrders)
 
 router.get('/checkout', shopController.getCheckout);
 
