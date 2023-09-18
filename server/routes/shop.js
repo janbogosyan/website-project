@@ -28,7 +28,9 @@ router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
-router.get('/products/:productId', );  //for specific item with Id
+// router.get('/products/delete') more specific routes shoukd be first
+
+router.get('/products/:productId', shopController.getProduct );  //for specific item with Id
 
 
 router.get('/cart', shopController.getCart);
