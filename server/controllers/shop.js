@@ -11,7 +11,7 @@ exports.getProducts = (req, res, next) => {
     });
 };
 
-exports.getProduct = (req, res, next) => {   //our productId comes from /routes/shop/    bcs there we set our route to :productId   router.get('/products/:productId', shopController.getProduct )
+exports.getProduct = (req, res, next) => {   //our productId comes from /routes/shop/    bcs there we set our route to :productId (it can be any name)  router.get('/products/:productId', shopController.getProduct )
     const prodId = req.params.productId;    //express.js give us this req.params by default The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}. 
     Product.findById(prodId, product => {   //findById is our custom static function from the mode
         res.render('shop/product-details',{
@@ -38,6 +38,12 @@ exports.getCart = (req, res, next) => {
         addProductTitle: 'Your Cart'
     });
 };
+ 
+exports.postCard = (req,res,next) => {
+    const prodId = req.body.productId;   //extract the data  productId its from product-details by name=''
+    console.log(prodId);
+    res.redirect('/cart');
+}
 
 exports.getOrders = (req, res, next) => {
     res.render('shop/orders', {

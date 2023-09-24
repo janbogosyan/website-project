@@ -26,11 +26,15 @@
                         <p class="product__description"> <%= product.description %> </p>
                     </div>
                     <div class="card__actions">
-                        <!-- /products/0.2452  we will have some uniq id to every product path and from folder data/products.json we delete them so our new data will be correct with added id to every product  -->
+                        <!-- /products/0.2452 we took id from our models/product.js/save() we will have some uniq id to every product path and from folder data/products.json we can delete them so our new data will be correct with added id to every product  -->
                         <a href="/products/<%= product.id %>" class="btn">Details</a>
                         <form action="/add-to-cart" method="POST">
                             <button class="btn">Add to Cart</button>
                         </form>
+
+                        <!-- {product:product} because its inside a loop -->
+                        <%- include ('../includes/add-to-cart.ejs', {product: product}) %>
+                       
                     </div>
                 </article>
                 <% } %>

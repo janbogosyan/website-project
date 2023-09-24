@@ -26,16 +26,22 @@ const shopController = require('../controllers/shop')
 //this routes folder work together with the controllers folder
 router.get('/', shopController.getIndex);
 
+// router.get('/products', shopController.getProducts);
+
 router.get('/products', shopController.getProducts);
+router.get('/products/:productId', shopController.getProduct);
+
 
 // router.get('/products/delete') more specific routes shoukd be first
 
- ;  //for specific item with Id
+;  //for specific item with Id
 
 
 router.get('/cart', shopController.getCart);
 
-router.get('/orders', shopController.getOrders)
+router.post('/cart', shopController.postCard);
+
+router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
 
